@@ -1,0 +1,22 @@
+@(cats:Seq[Cat])
+<!DOCTYPE html>
+    <div>
+        <div id="cats">
+
+            <h2>Insert a kitty cat hrer;)</h2>
+
+            <form action="/insert/cat" method="POST">
+                <input name="name" type="text" placeholder="name your feline frien">
+                <input name="color" type="text" placeholder="enter the color of this kitty cat"/>
+                <input type="submit"/>
+            </form>
+            <h2>Previously inserted cats:</h2>
+            <table>
+                <tr><th>Name</th><th>Color</th></tr>
+                @for(c <- cats){
+                <tr><td>@c.name</td><td>@c.color</td></tr>
+                }
+            </table>
+        </div>
+    </div>
+
