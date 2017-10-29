@@ -1,19 +1,14 @@
 package controllers
 
-
 import javax.inject.Inject
-
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
-
 import dao.CatDao
 import models.Cat
-
 import play.api.data._
 import play.api.data.Forms._
 import play.api.mvc._
 
 case class Item(name:String, price:Integer)
-
 
 class Application @Inject()(cats: CatDao) extends Controller {
 
@@ -31,4 +26,5 @@ class Application @Inject()(cats: CatDao) extends Controller {
 		val cat: Cat = catForm.bindFromRequest.get
 		cats.insert(cat).map(_ => Redirect(routes.Application.index))
 	}
+
 }
