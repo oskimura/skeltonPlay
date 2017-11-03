@@ -1,8 +1,5 @@
-package models.Models
+package models
 
-/**
-  * Created by osamukimura on 2017/10/29.
-  */
-class Login {
 
-}
+
+case class Login (email : String, password : String)

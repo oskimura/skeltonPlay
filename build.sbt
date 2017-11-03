@@ -9,7 +9,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-slick" % "1.1.1",
   "com.typesafe.play" %% "play-slick-evolutions" % "1.1.1",
   "com.h2database" % "h2" % "1.4.191"
+  ,"org.twitter4j" % "twitter4j-core" % "4.0.2"
 )
+
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 

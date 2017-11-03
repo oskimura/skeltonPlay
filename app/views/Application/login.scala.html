@@ -1,10 +1,27 @@
+@(form : Login)
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Zentasks</title>
+
 </head>
 <body>
-$END$
+    <header>
+        <a href="@routes.Application.index" id="logo"><span>Zen</span>tasks</a>
+    </header>
 </body>
 </html>
+
+@helper.form(routes.LoginApplication.authenticate) {
+<h1>sign</h1>
+
+<p>
+    <input type="email" name="email" placeholder="Email" value="">
+</p>
+<p>
+    <input type="password" name="password" placeholder="Password">
+</p>
+<p>
+    <button type="submit">Login</button>
+</p>
+}

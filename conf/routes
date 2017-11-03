@@ -1,2 +1,22 @@
 GET /  @controllers.Application.index
 POST /insert/cat    @controllers.Application.insert
+GET /login @controllers.LoginApplication.login
+POST /login @controllers.LoginApplication.authenticate
+
+# Application
+#GET /profile @controllers.Application.profile
+
+# Rest api
+#GET /rest/profile @controllers.RestApi.profile
+
+
+# Public assets
+#GET /assets/*file controllers.Assets.versioned(path="/public", file: Asset)
+#GET /webjars/*file controllers.WebJarAssets.at(file)
+
+#GET /auth/signup controllers.Auth.signOut
+
+# Twitter
+GET     /twitterLogin                                 controllers.TwitterController.twitterLogin
+GET     /twitterOAuthCallback                         controllers.TwitterController.twitterOAuthCallback
+GET     /twitterLogout                                controllers.TwitterController.twitterLogout
